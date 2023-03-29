@@ -74,6 +74,9 @@
 
 **EXPLANATION:**
 
+![ERD](https://user-images.githubusercontent.com/73193530/227920994-ebe10720-3031-4259-acfa-b60f6b0f6bf8.png)
+
+
 This ERD is mapped according to the given case, but due to some demands
 in queries, it was changed a little bit or basically we added some
 attributes according to given query.
@@ -234,6 +237,7 @@ SELECT Reg_No FROM AIRPLANE
 WHERE Reg_No NOT IN ( SELECT Reg_No FROM PLANE_SERVICE);
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227913800-f225d595-eaad-47b4-b649-a09babb269f7.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image1.png){width="2.308333333333333in"
 height="2.0990977690288712in"}
@@ -252,6 +256,7 @@ JOIN PLANE_TYPE pt ON a.Pmodel = pt.Pmodel
 WHERE pt.Pcapacity \> 200;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227914032-5718f1fc-49aa-4457-9d33-c378f10c5015.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image2.png){width="2.75in"
 height="1.4686646981627296in"}
@@ -268,6 +273,7 @@ FROM EMPLOYEE
 WHERE Eshift = \'Night\';
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227914134-2145f86d-bf05-44ad-bacc-49a757ce0c89.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image3.png){width="1.5418000874890638in"
 height="0.6833923884514436in"}
@@ -282,6 +288,7 @@ SELECT top 5 EMPLOYEE.Essn FROM EMPLOYEE
 ORDER BY EMPLOYEE.Eworkhour DESC;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227914183-6e47d7b9-d067-433b-89b4-3e8b4afe998a.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image4.png){width="1.325in"
 height="1.0927832458442694in"}
@@ -297,6 +304,7 @@ WHERE ps.PSdate BETWEEN DATEADD(day, -7, GETDATE()) AND GETDATE() and
 ps.Reg_No=a.Reg_No;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227914767-437bb4fa-7161-462e-b695-27756d705f7d.png)
 
 **Q6: Write a SQL query to find the names and phone numbers of all
 owners who have**
@@ -309,6 +317,7 @@ where o.Pdate BETWEEN DATEADD(day, -30, GETDATE()) AND GETDATE() and
 (o.ssn=x.Ossn);
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227914957-2b94849b-fb6d-4b8b-9d3d-d5f9f007f240.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image5.png){width="1.825in"
 height="2.0661603237095365in"}
@@ -323,6 +332,7 @@ FROM PILOT LEFT JOIN FLIES ON PILOT.Plic_num = FLIES.lic_num
 GROUP BY Plic_num;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227915078-783b3049-db64-452b-9405-4b2e39119e2d.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image6.png){width="2.05in"
 height="1.9945942694663168in"}
@@ -342,6 +352,7 @@ GROUP BY H.PHanger, H.Hcapacity, H.Hlocation
 ORDER BY AvailableSpace DESC;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227915334-d70d8033-c5e6-4faf-a4d1-b19c09d02188.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image7.png){width="1.6786909448818899in"
 height="1.3666666666666667in"}
@@ -361,6 +372,7 @@ GROUP BY c.Corp_Name
 ORDER BY num_planes_owned DESC;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227915558-10f55cb4-a018-4a75-8fe9-0530cad6e1f9.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image8.png){width="2.1in"
 height="1.1883234908136482in"}
@@ -381,6 +393,7 @@ INNER JOIN SERVICE S ON PS.Service_id = S.Sid
 GROUP BY PT.Pmodel;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227915655-f6a19aba-4a65-4f77-b9f0-8b5eb34e1162.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image9.png){width="2.00419728783902in"
 height="1.7416666666666667in"}
@@ -404,6 +417,7 @@ INNER JOIN WORKS_ON wo ON a.Pmodel = wo.model
 WHERE w.ssn IN (SELECT ssn FROM WORKS_ON WHERE model = a.Pmodel);
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227915756-ea34addc-add8-4fce-b594-8aca118a72b0.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image10.png){width="1.0666666666666667in"
 height="1.5743996062992125in"}
@@ -429,6 +443,7 @@ FULL JOIN HANGAR h ON a.PHanger = h.PHanger
 WHERE o.OAddress = h.Hlocation;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227915828-c8c1dfa0-7421-46c6-b162-249a16a9e395.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image11.png){width="1.6166666666666667in"
 height="1.2225207786526684in"}
@@ -447,6 +462,7 @@ JOIN AIRPLANE ON FLIES.model = AIRPLANE.Pmodel
 WHERE AIRPLANE.Pstatus = \'maintenance\';
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227915939-e4b602e8-7e47-43a2-9fb2-b1b923fa58d0.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image12.png){width="1.519103237095363in"
 height="1.425in"}
@@ -466,6 +482,7 @@ JOIN Corporation C ON O.ssn = C.Cssn
 WHERE C.Corp_Name = \'Star Corp\';
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227916039-0d45cd71-09fc-48d5-9ef6-8b1379caeabd.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image13.png){width="1.7501520122484688in"
 height="1.0250885826771654in"}
@@ -507,6 +524,7 @@ WHERE EMPLOYEE.Eshift = \'Morning\'
 );
 
 Output:
+![image](https://user-images.githubusercontent.com/73193530/227916138-0b61aae9-e8bc-4cd4-bfd7-8a89d985ecc7.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image14.png){width="1.6723982939632547in"
 height="2.140097331583552in"}
@@ -550,6 +568,7 @@ LEFT JOIN AIRPLANE A ON H.PHanger = A.PHanger
 GROUP BY H.PHanger;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227917040-51a30791-382c-40bd-8439-566295711419.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image16.png){width="1.4788659230096237in"
 height="1.2583333333333333in"}
@@ -562,6 +581,7 @@ SELECT Pmodel, COUNT(\*) AS TotalPlanes FROM AIRPLANE
 GROUP BY Pmodel;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227918073-2e9067aa-88fd-4244-8f4e-3569e34bb1d6.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image17.png){width="1.4474114173228347in"
 height="1.6833333333333333in"}
@@ -574,6 +594,7 @@ SELECT Reg_No, COUNT(\*) AS TotalServices
 FROM PLANE_SERVICE GROUP BY Reg_No;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227917972-81a52d13-8c3e-4504-b346-fb9a0a7be599.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image18.png){width="1.45in"
 height="2.0059284776902886in"}
@@ -586,6 +607,7 @@ SELECT Eshift, AVG(Esalary) AS Average_Salary_By_Shifts FROM EMPLOYEE
 GROUP BY Eshift;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227917913-a61e4d30-27e6-4135-aa28-5819662753ea.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image19.png){width="1.8256244531933508in"
 height="1.0583333333333333in"}
@@ -602,6 +624,7 @@ JOIN AIRPLANE A ON OWNS.Reg_No = A.Reg_No
 GROUP BY O.Oname;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227917597-569afe3c-be16-4d98-a204-5cae07a92e4a.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image20.png){width="1.4146073928258969in"
 height="1.9583333333333333in"}
@@ -616,6 +639,7 @@ JOIN FLIES F ON P.Plic_num = F.lic_num
 GROUP BY P.Pname;
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227917548-c882ed92-09a5-425a-b1df-1c6ec44fda58.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image21.png){width="1.6in"
 height="1.6907797462817147in"}
@@ -689,6 +713,7 @@ monitor the hangar capacity and ensure proper utilization of available
 space.\*/
 
 **Output:**
+![image](https://user-images.githubusercontent.com/73193530/227917450-ce92c78a-57ad-42a1-a8f3-17194f63822d.png)
 
 ![](vertopal_e0c8aeb7e96f4c7d9bf55080a4832e16/media/image22.png){width="4.021019247594051in"
 height="4.058333333333334in"}

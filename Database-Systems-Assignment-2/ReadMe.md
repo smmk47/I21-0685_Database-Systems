@@ -81,6 +81,11 @@ This ERD is mapped according to the given case, but due to some demands
 in queries, it was changed a little bit or basically we added some
 attributes according to given query.
 
+**Relational Model:**
+
+![relational model](https://user-images.githubusercontent.com/73193530/228492715-0821dd30-2945-47b2-adfe-e73c2e7b36b4.png)
+
+
 **Tables:**
 
 create database airportdbms;
